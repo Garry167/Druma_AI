@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false); // Set loading to false after 2 seconds
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer); // Clean up timer
   }, []);

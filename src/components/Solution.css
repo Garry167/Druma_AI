@@ -55,9 +55,15 @@ h1 {
     padding: 20px;
 }
 
+.content-half p{
+    font-weight: lighter;
+}
+
+
 .content-half img {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Keep the width responsive */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
     border-radius: 5px;
     border: 3px solid #03a9f4;
     padding: 3px;
@@ -114,6 +120,9 @@ h1 {
     .content-half {
         padding: 10px;
     }
+    .content-half img {
+        height: 250px; /* Adjust height for medium-sized screens */
+    }
 }
 
 /* For screen width below 576px */
@@ -128,6 +137,6 @@ h1 {
     }
 
     .content-half img {
-        height: auto; /* Ensure image height scales proportionally */
+        height: 250px; /* Adjust height for medium-sized screens */
     }
 }
