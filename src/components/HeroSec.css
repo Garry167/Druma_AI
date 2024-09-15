@@ -1,0 +1,138 @@
+/* General styling for hero section */
+.hero {
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem; /* Space between content and scroll-down */
+}
+
+.hero-title {
+  font-size: 3rem;
+  /* font-weight: bold; */
+  /* margin-bottom: 2rem; */
+}
+ .hero-typed{
+  font-weight: lighter;
+}
+
+.hero-subtitle {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons .btn-primary {
+  background-color: #03a9f4;
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #0288d1;
+}
+
+.hero-buttons .btn-secondary {
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 2px solid #03a9f4;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background-color: #03a9f4;
+  color: #fff;
+  border-color: #03a9f4;
+}
+
+/* Responsive styling */
+@media (max-width: 780px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    display: inline;
+  }
+}
+
+@media (max-width: 415px) {
+  .hero-buttons {
+    text-align: center;
+  }
+  
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    display: block;
+    margin: 8px auto;
+    width: 80%;
+  }
+}
+
+/* Scroll Down Animation */
+.scroll-down {
+  position: absolute;
+  bottom: 2rem; /* Adjust based on the space needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #03a9f4;
+  border-radius: 50%;
+  position: relative;
+  animation: down 2s infinite;
+}
+
+.mouse::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  border-left: 2px solid #03a9f4;
+  border-bottom: 2px solid #03a9f4;
+  transform: rotate(-45deg);
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+}

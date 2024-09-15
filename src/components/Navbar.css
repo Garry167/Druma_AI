@@ -1,0 +1,97 @@
+/* Base Navbar styling */
+.navbar {
+    background-color: #fff;  
+    position: fixed; /* Make the navbar stick to the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left edge */
+    width: 100%; /* Make it span the full width of the viewport */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow for visual separation */
+    transition: background-color 0.3s ease;
+    height: 45px;
+    padding: 0 250px;
+    z-index: 200;
+    /* Ensure it stays above other content */
+}
+
+/* Adjustments for mobile view or collapsing state */
+.navbar-toggler {
+    border: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Adjust logo size */
+.B_logo {
+    height: 35px;
+    width: 35px;
+}
+.login_btn{
+    background: none;
+    border: none;
+}
+.user_login_logo {
+    border: 2px solid #3FDBFD;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: #3FDBFD;
+    height: 30px;
+    width: 30px;
+}
+
+/* Hover effect: underline transition from left to right */
+.nav-item .nav-link:hover {
+    color: #3FDBFD; /* Change color to #3FDBFD on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Media Queries */
+
+/* For screen width below 1000px */
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+    .navbar-nav {
+        justify-content: space-around; /* Spacing between nav items */
+    }
+}
+
+/* For screen width below 768px */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto; /* Allow the navbar to adjust its height */
+        padding: 0 15px; /* Adjust padding */
+        padding-bottom: 20px;
+    }
+    .navbar-nav {
+        flex-direction: column; /* Stack the nav items vertically */
+    }
+    .nav-item {
+        margin: 5px 0; /* Space between items */
+    }
+    .user_login {
+        margin-top: 10px; /* Add spacing for the login section */
+    }
+}
+
+/* For screen width below 576px */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0 10px;
+        padding-bottom: 5px;
+    }
+    .navbar-brand {
+        font-size: 1.2rem; /* Reduce brand font size */
+    }
+    .B_logo {
+        height: 30px;
+        width: 30px;
+    }
+    .btn {
+        font-size: 10px;
+    }
+}

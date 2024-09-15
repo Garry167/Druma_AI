@@ -1,0 +1,126 @@
+/* General Carousel Styles */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(85%);
+    transition: transform 0.5s ease;
+    z-index: 0;
+    opacity: 0.8;
+    border: 3px solid #03a9f4;
+    padding: 4px;
+
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+    /* Zoom effect on hover */
+    border: none;
+}
+
+#services {
+    padding-top: 60px;
+}
+
+#services h4 {
+    text-align: center;
+    color: white;
+    /* z-index: 2; */
+
+}
+
+/* Caption Styling */
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Navigation Buttons */
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: white;
+} */
+
+/* .carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+} */
+
+/* Custom Navigation Buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(100%);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 1.25rem; /* Adjust font size for mobile */
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+
+    .carousel-item img {
+        height: 250px;
+        width: 80%;
+    }
+
+    /* Adjust carousel controls for mobile */
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* .carousel-indicators button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #555;
+        margin: 5px;
+    } */
+    
+    /* .carousel-indicators .active {
+        background-color: #000;
+    } */
+
+    /* Move the indicators below the image */
+.carousel-indicators {
+    position: relative; /* Remove the absolute positioning */
+    margin-top: 10px; /* Space between the image and indicators */
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the indicator buttons */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #555;
+    margin: 5px;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+    
+
+    
+}

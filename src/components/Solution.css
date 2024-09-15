@@ -1,0 +1,133 @@
+/* Base styling */
+.solution-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 300px; /* Add 60px padding to top and bottom */
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 15px;
+    background-color: transparent;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: 2px solid #03a9f4;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #03a9f4;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.content-half {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-half img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #03a9f4;
+    padding: 3px;
+}
+
+/* Media Queries */
+
+/* For screen width below 1200px */
+@media (max-width: 1200px) {
+    .solution-container {
+        padding: 60px 20px; /* Adjust padding for medium-sized screens */
+    }
+}
+
+/* For screen width below 992px */
+@media (max-width: 992px) {
+    .solution-container {
+        padding: 60px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        margin: 10px 0;
+        padding: 0.8rem 1.5rem; /* Adjust padding for buttons */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
+
+/* For screen width below 768px */
+@media (max-width: 768px) {
+    .solution-container {
+        padding: 60px 10px; /* Maintain top and bottom padding for small screens */
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        margin: 10px 0;
+        padding: 0.8rem 1.2rem; /* Adjust padding for buttons */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-half {
+        padding: 10px;
+    }
+}
+
+/* For screen width below 576px */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem; /* Adjust font size for very small screens */
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 0.6rem 1rem; /* Further adjust padding for very small screens */
+    }
+
+    .content-half img {
+        height: auto; /* Ensure image height scales proportionally */
+    }
+}

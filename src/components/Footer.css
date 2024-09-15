@@ -1,0 +1,112 @@
+/* General Footer Styles */
+.footer-container {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 40px 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 5px solid #673ab7;
+}
+
+.footer-container .content {
+    display: flex;
+    justify-content: space-between; /* Ensure spacing between columns */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.Links, .about, .socials, .logo_sec {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+    color: #000;
+}
+
+/* Links Styling */
+.link-itemSet-1 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.link-item a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+}
+
+.link-item a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* About Section Styling */
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about .link-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Social Icons Section */
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.logo_sec img {
+    height: 180px;
+    width: 180px;
+}
+
+/* For Mobile Phones */
+@media (max-width: 576px) {
+    .footer-container {
+        padding: 20px 10px;
+    }
+
+    .Links, .about, .socials {
+        text-align: center;
+        width: 100%;
+    }
+
+    .link-itemSet-1, .link-itemSet-2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .socials img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo_sec img {
+        display: none;
+        width: 50px;
+        height: 50px;
+    }
+
+    .copyR {
+        padding: 0 12px;
+    }
+}
